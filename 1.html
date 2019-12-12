@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .d1>div{
+            height: 100vh;
+            width: 100%;
+            position: sticky;
+            top: 0px;
+            line-height: 50vh;
+            text-align: center;
+
+            padding: 3rem;
+            box-shadow: 0 0 50px -12px rgba(0, 0, 0, 0.25);
+            
+            scroll-snap-align: start;
+        }
+        .d1>div:nth-of-type(1){background-color:rgba(54, 190, 150, 0.5);}
+        .d1>div:nth-of-type(2){background-color:rgba(51, 202, 83, 0.5);}
+        .d1>div:nth-of-type(3){background-color:rgba(129, 54, 190, 0.5);}
+        .d1>div:nth-of-type(4){background-color:rgba(190, 54, 122, 0.5);}
+        
+        .vertical-scroll-snap {
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            max-height: 100vh;
+        }
+
+        *, *:before, *::after{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-scroll-snap d1">
+        <div>d1</div>
+        <div>d2</div>
+        <div>d3</div>
+        <div>d4</div>
+    </div>
+</body>
+</html>
